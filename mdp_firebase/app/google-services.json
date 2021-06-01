@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "523449482780",
+    "project_id": "sorder-ec44c",
+    "storage_bucket": "sorder-ec44c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523449482780:android:2900bac34a745f7cc529d9",
+        "android_client_info": {
+          "package_name": "kr.icehs.intec.mdp_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523449482780-gn3utrocft59fff95v8oe7v3bp4n173n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiXbXMSITZjAcWViPI33uNn510b2oYfe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523449482780-gn3utrocft59fff95v8oe7v3bp4n173n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
