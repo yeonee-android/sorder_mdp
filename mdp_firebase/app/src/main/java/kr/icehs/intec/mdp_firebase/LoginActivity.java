@@ -86,6 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                 // 회원가입 화면으로 이동
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
