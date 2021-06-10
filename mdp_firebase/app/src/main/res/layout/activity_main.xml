@@ -152,44 +152,12 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="30dp"
-                    android:src="@drawable/zzazang" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="짜장"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/m5_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="담기"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
             <Button
                 android:id="@+id/basket_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="장바구니"
-                android:layout_marginTop="30dp"/>
+                android:layout_marginTop="50dp"/>
         </LinearLayout>
     </ScrollView>
 

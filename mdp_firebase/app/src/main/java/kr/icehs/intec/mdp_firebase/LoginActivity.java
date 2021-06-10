@@ -1,4 +1,4 @@
-package kr.icehs.intec.mdp_firebase;
+ package kr.icehs.intec.mdp_firebase;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -91,6 +91,5 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
-
 
 }

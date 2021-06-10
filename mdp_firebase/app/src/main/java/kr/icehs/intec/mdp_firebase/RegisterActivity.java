@@ -27,10 +27,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     private FirebaseAuth mFirebaseAuth;     // 파이어베이스 인증처리
     private DatabaseReference mDatebaseRef; // 실시간 데이터베이스
-    private EditText mEtEmail, mEtPwd;      // 회원가입 입력필드
+    private EditText mEtEmail, mEtPwd, mEtPwd2;      // 회원가입 입력필드
     private Button mBtnRegister;            // 회원가입 버튼
-    private Button reCheck;
-    int cnt=1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,16 +48,18 @@ public class RegisterActivity extends AppCompatActivity {
 
         mEtEmail = findViewById(R.id.et_email);
         mEtPwd = findViewById(R.id.et_pwd);
+        mEtPwd2 = findViewById(R.id.et_pwd2);
         mBtnRegister = findViewById(R.id.btn_register);
 
         mBtnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String str1 = mEtPwd.getText().toString();
+                String str2 = mEtPwd2.getText().toString();
                 // 회원가입 처리 시작
                 String strEmail = mEtEmail.getText().toString();
                 String strPwd = mEtPwd.getText().toString();
-                if (cnt == 0) {
+                    if (str1.equals(str2)) {
                     // Firebase Auth 진행
                     mFirebaseAuth.createUserWithEmailAndPassword(strEmail, strPwd).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -78,37 +79,12 @@ public class RegisterActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 finish();
                             } else {
-                                Toast.makeText(RegisterActivity.this, "회원가입에 실패하셨습니다", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-                } else
-                    Toast.makeText(RegisterActivity.this, "중복확인을 해주세요", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        reCheck = findViewById(R.id.reCheck);
-        reCheck.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String strEmail = mEtEmail.getText().toString();
-                String strPwd = mEtPwd.getText().toString();
-
-                mFirebaseAuth.createUserWithEmailAndPassword(strEmail, strPwd).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            cnt=0;
-                            mFirebaseAuth.getCurrentUser().delete();
-                            Toast.makeText(RegisterActivity.this, "사용 가능한 이메일 입니다.", Toast.LENGTH_SHORT).show();
-                        } else {
-                            if(cnt==1) {
-                                cnt=1;
                                 Toast.makeText(RegisterActivity.this, "중복된 이메일 입니다.", Toast.LENGTH_SHORT).show();
                             }
                         }
-                    }
-                });
+                    });
+                }
+                else Toast.makeText(RegisterActivity.this, "비밀번호를 다시 확인해주세요.", Toast.LENGTH_SHORT).show();
             }
         });
     }
