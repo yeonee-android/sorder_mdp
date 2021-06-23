@@ -7,159 +7,228 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="메뉴"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
-
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp">
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/category_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/basket_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:layout_gravity="center"
+        android:hint="검색해주세요!"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:drawableLeft="@drawable/search_btn"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1">
+
+        <HorizontalScrollView
+            android:id="@+id/scroll1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="412dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ad1"
+                    android:scaleType="center" />
+
+                <ImageView
+                    android:layout_width="410dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/pizza" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:id="@+id/scroll2"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="200dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="인기 검색어"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1  칸쵸"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:drawableRight="@drawable/up_draw"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2  초코송이"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:drawableRight="@drawable/minus_draw"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3  프링글스"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:drawableRight="@drawable/down_draw"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4  초코우유"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:drawableRight="@drawable/down_draw"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+        </ScrollView>
 
         <LinearLayout
+            android:id="@+id/linear1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="30dp"
-                    android:src="@drawable/chiken" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="치킨"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/m1_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="담기"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="30dp"
-                    android:src="@drawable/pizza" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="피자"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/m2_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="담기"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="30dp"
-                    android:src="@drawable/bossam" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="보쌈"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/m3_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="담기"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="30dp"
-                    android:src="@drawable/zogbal" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="족발"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/m4_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="담기"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/basket_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="장바구니"
-                android:layout_marginTop="50dp"/>
+                android:layout_height="match_parent"
+                android:text="카테고리 화면 입니다."
+                android:layout_gravity="center"
+                android:gravity="center"/>
         </LinearLayout>
-    </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="사용자 화면 입니다."
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <ImageButton
+            android:id="@+id/home_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="center"
+            android:background="@drawable/home_blue"
+            android:layout_marginStart="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/category_btn2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/user_btn"
+            app:layout_constraintStart_toEndOf="@+id/home_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/user_btn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 </LinearLayout>

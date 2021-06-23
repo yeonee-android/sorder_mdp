@@ -45,8 +45,12 @@ public class LoginActivity extends AppCompatActivity {
 
         new_addr_textView = findViewById(R.id.text1);
         SpannableStringBuilder builder = new SpannableStringBuilder("SORDER");
-        builder.setSpan(new ForegroundColorSpan(Color.parseColor("#77feceb1")), 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        builder.setSpan(new ForegroundColorSpan(Color.parseColor("#77ffffff")), 1, 6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.setSpan(new ForegroundColorSpan(Color.parseColor("#774285F4")), 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.setSpan(new ForegroundColorSpan(Color.parseColor("#77EA4335")), 1, 2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.setSpan(new ForegroundColorSpan(Color.parseColor("#77FBBC05")), 2, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.setSpan(new ForegroundColorSpan(Color.parseColor("#774285F4")), 3, 4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.setSpan(new ForegroundColorSpan(Color.parseColor("#7734A853")), 4, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.setSpan(new ForegroundColorSpan(Color.parseColor("#77EA4335")), 5, 6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         new_addr_textView.append(builder);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
