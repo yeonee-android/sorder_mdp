@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:id="@+id/drawerView"
+    android:background="#5559b4">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#5559b4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="반 갑 습 니 다"
+            android:textSize="14dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/genter_icon"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="50dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="고객님"
+            android:textSize="26dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="80dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="좋은 쇼핑 되십시오."
+            android:textSize="14dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="130dp"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#80ffffff"
+            android:layout_marginTop="200dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홈화면"
+            android:textColor="#ffffff"
+            android:id="@+id/nav_ex"
+            android:layout_marginTop="220dp"
+            android:layout_marginLeft="44dp"
+            android:onClick="OnClick"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#80ffffff"
+            android:layout_marginTop="260dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카테고리"
+            android:textColor="#ffffff"
+            android:id="@+id/nav_info"
+            android:layout_marginTop="280dp"
+            android:layout_marginLeft="44dp"
+            android:onClick="OnClick"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#80ffffff"
+            android:layout_marginTop="320dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원정보"
+            android:textColor="#ffffff"
+            android:id="@+id/nav_help"
+            android:layout_marginTop="340dp"
+            android:layout_marginLeft="44dp"
+            android:onClick="OnClick"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#80ffffff"
+            android:layout_marginTop="380dp"/>
+
+    </RelativeLayout>
+</LinearLayout>
